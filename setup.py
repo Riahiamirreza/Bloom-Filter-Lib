@@ -1,10 +1,10 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
-setup(name='Bloom Filter Lib',
-      version='0.0.1',
+setup(name='Bloom_Filter_Lib',
+      version='0.0.2',
       description='',
       author='Amirreza Riahi',
       author_email='riahiamirreza79@gmail.com',
       url='',
-      packages=[],
+      packages=['bf'],
      )
