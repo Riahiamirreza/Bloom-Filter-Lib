@@ -15,4 +15,4 @@ class BloomFilter:
     
     def contain(self, item: bytes) -> bool:
         hash_value: int = self.hasher.hash(item)
-        return self.bit_vector.contain(hash_value) is None
+        return self.bit_vector.contain(hash_value)
