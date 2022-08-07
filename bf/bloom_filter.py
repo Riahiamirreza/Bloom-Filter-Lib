@@ -1,4 +1,4 @@
-from bf.haser import Hasher
+from bf.hasher import Hasher
 from bf.bit_vector import BitVector
 
 
