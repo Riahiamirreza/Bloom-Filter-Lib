@@ -28,7 +28,7 @@ def get_false_positive_ratio(
 
 
 if '__main__' == __name__:
-    c = 20
+    c = 2
     attempts = 500
     total = 0
     for _ in range(c):
