@@ -3,7 +3,6 @@ from array import array
 
 class BitVector:
     def __init__(self, size: int):
-        # self.vector = array('B', [0] * size)
         self.vector = bytearray((0,) * size)
 
     def set_to_one(self, *indices: int):
