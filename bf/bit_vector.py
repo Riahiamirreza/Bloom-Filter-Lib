@@ -22,7 +22,4 @@ class BitVector:
         return (self.vector >> index) % 2 != 0
 
     def _set_bit(self, index: int):
-        temp_list = list('{:01024b}'.format(self.vector))
-        if temp_list[index] != '1':
-            temp_list[index] = '1'
-        self.vector = int(''.join(temp_list), 2)
+        self.vector += (2 << index)
