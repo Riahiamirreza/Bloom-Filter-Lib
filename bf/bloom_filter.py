@@ -11,11 +11,11 @@ class BloomFilter:
 
     def insert(self, item: bytes) -> None:
         hash_value: int = self.hasher.hash(item)
-        self.bit_vector.add(hash_value)
+        self.bit_vector.set_to_one(hash_value)
     
     def contain(self, item: bytes) -> bool:
         hash_value: int = self.hasher.hash(item)
         return self.bit_vector.contain(hash_value)
 
     def __contains__(self, item: bytes) -> bool:
-        return self.contain
+        return self.contain(item)

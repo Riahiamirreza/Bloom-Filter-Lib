@@ -5,8 +5,8 @@ from bf import BloomFilter
 
 
 def get_false_positive_ratio(
-        bit_vector_size: int = 2**75, 
-        space: int = 5, 
+        bit_vector_size: int = 1024, 
+        space: int = 50, 
         does_not_contain_attempts: int = 500
     ):
     f = BloomFilter(bit_vector_size=bit_vector_size)
@@ -28,4 +28,11 @@ def get_false_positive_ratio(
 
 
 if '__main__' == __name__:
-    print(get_false_positive_ratio())
+    c = 200
+    attempts = 500
+    total = 0
+    for _ in range(c):
+        total += get_false_positive_ratio(does_not_contain_attempts=attempts)
+    
+    print(total)
+    print(total/(c*attempts))

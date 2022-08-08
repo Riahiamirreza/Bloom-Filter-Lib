@@ -2,14 +2,12 @@ import unittest
 
 from bf import BloomFilter
 
-
 class TestBloomFilter(unittest.TestCase):
 
     def test_does_not_contain_empty_01(self):
         f = BloomFilter()
         self.assertIs(f.contain(b'hello'), False)
         self.assertIs(f.contain(b'Ali'), False)
-        self.assertIs(f.contain(b''), False)
         self.assertIs(f.contain(b'ok'), False)
 
     def test_does_contain_item_01(self):
